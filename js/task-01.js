@@ -1,4 +1,4 @@
-const categories = document.querySelector("#categories");
+/* const categories = document.querySelector("#categories");
 
 console.log(`Number of categories:  ${categories.children.length}`);
 
@@ -8,7 +8,7 @@ classNames.forEach(function(childName) {
     console.log(`Category: ${childName.firstElementChild.textContent}
     Elements: ${childName.lastElementChild.children.length} `);
 }); 
-
+ */
 
 
 
