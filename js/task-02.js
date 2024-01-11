@@ -1,4 +1,4 @@
-const ingredients = [
+/* const ingredients = [
   'Potatoes',
   'Mushrooms',
   'Garlic',
@@ -15,4 +15,4 @@ const ingredientsItems = ingredients.map(ingredientsItem => {
 });
 
 const ingredientsList = document.querySelector("#ingredients");
-ingredientsList.append(...ingredientsItems);
+ingredientsList.append(...ingredientsItems); */
