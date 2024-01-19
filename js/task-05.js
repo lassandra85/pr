@@ -9,11 +9,11 @@ const ref = {
 };
 
 const changeName = (e) => {
-    /* if (ref.textContent.length === 0) {
-        
-    } */
-    e.preventDefault();
-    console.log("input")
+    if (ref.inputText.textContent === '') {
+        ref.nameOutput.textContent = 'Anonymous';
+    } else { }
+    /* e.preventDefault(); */
+    /* console.log("input") */
 };
 
 ref.inputText.addEventListener('input', changeName);
