@@ -4,18 +4,16 @@
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1> */
 
 const ref = {
-    inputText: document.querySelector('#name-input'),
-    nameOutput: document.querySelector('#name-output'),
+  inputText: document.querySelector("#name-input"),
+  nameOutput: document.querySelector("#name-output"),
 };
 
 const changeName = (e) => {
-    if (ref.inputText.textContent === '') {
-        ref.nameOutput.textContent = 'Anonymous';
-    } else { }
-    /* e.preventDefault(); */
-    /* console.log("input") */
+  if (ref.inputText.value === "") {
+    ref.nameOutput.textContent = "Anonymous";
+  } else {
+    ref.nameOutput.textContent = e.currentTarget.value;
+  }
 };
 
-ref.inputText.addEventListener('input', changeName);
-
-
+ref.inputText.addEventListener("input", changeName);
