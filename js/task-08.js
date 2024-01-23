@@ -5,14 +5,14 @@ loginForm.addEventListener("submit", handleLogin);
 function handleLogin(e) {
   e.preventDefault();
   const form = e.target;
-  const login = form.elements.login.value;
+  const email = form.elements.email.value;
   const password = form.elements.password.value;
 
-  if (login === "" || password === "") {
+  if (email === "" || password === "") {
     return alert("Please fill in all the fields!");
   }
 
-  /* console.log(`Login: ${login.value}, Password: ${password.value}`); */
+  /* console.log(`Email: ${email.value}, Password: ${password.value}`); */
   form.reset();
 }
 
