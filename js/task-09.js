@@ -1,8 +1,12 @@
 const ref = {
+  bodyJs: document.querySelector("body"),
   backgroundColorBody: document.querySelector(".widget"),
   spanColor: document.querySelector(".color"),
   btnChangeColor: document.querySelector(".change-color"),
 };
+
+ref.btnChangeColor.addEventListener("click", changeColor);
+function changeColor(e) {}
 
 /* function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
