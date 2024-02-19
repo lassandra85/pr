@@ -1,19 +1,29 @@
 const loginForm = document.querySelector(".login-form");
+console.dir(loginForm);
 
-loginForm.addEventListener("submit", handleLogin);
+const formValue = {};
 
-function handleLogin(e) {
+loginForm.addEventListener("submit", submitForm);
+
+function submitForm(e) {
   e.preventDefault();
-  const form = e.target;
-  const email = form.elements.email.value;
-  const password = form.elements.password.value;
 
-  if (email === "" || password === "") {
-    return alert("Please fill in all the fields!");
+  const form = e.currentTarget;
+  const { email, password } = form.elements;
+
+  console.log(email.value);
+
+  if (email.value === "" || password.value === "") {
+    alert("Please fill in all the fields!");
   }
 
-  /* console.log(`Email: ${email.value}, Password: ${password.value}`); */
+  formValue.email = email.value;
+  formValue.password = password.value;
+  console.log(formValue);
+
   form.reset();
+  const formValue = {};
+  /* event.currentTarget.reset(); */
 }
 
 /* Обработка отправки формы form.login-form должна быть по событию submit.
