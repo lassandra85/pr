@@ -33,16 +33,19 @@ function createBoxes(amount) {
      boxes.append(...boxesAmount); */
     /*====    Варіант за методом insertAdjacentHTML()    ====*/
 
-    let boxesAmount = "";
+    const boxesAmount = [];
 
     for (let i = 0; i < amount; i += 1) {
-      boxesAmount += `<div style = 
+      const markup = `<div style = 
       "background-color: ${getRandomHexColor()}; 
       width: ${30 + 10 * i}px; 
       height: ${30 + 10 * i}px;">
       </div>`;
+
+      boxesAmount.push(markup);
     }
-    boxes.insertAdjacentHTML("afterbegin", boxesAmount);
+
+    boxes.insertAdjacentHTML("afterbegin", boxesAmount.join(""));
   } else {
     alert("Please enter number in the form!");
     return;
