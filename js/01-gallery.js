@@ -1,7 +1,7 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-console.dir(galleryItems);
+/* console.dir(galleryItems); */
 
 const gallery = document.querySelector(".gallery");
 
@@ -21,4 +21,6 @@ const markup = galleryItems
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", markup);
-console.dir(gallery);
+/* console.dir(gallery); */
+
+console.dir(basicLightbox);
