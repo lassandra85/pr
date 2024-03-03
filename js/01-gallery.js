@@ -23,4 +23,22 @@ const markup = galleryItems
 gallery.insertAdjacentHTML("beforeend", markup);
 /* console.dir(gallery); */
 
-console.dir(basicLightbox);
+const instance = basicLightbox.create(`
+    <div class="modal">
+        <p>
+            Your first lightbox with just a few lines of code.
+            Yes, it's really that simple.
+        </p>
+    </div>
+`);
+
+gallery.addEventListener("click", itemShow);
+
+function itemShow(evt) {
+  evt.preventDefault();
+  const item = evt.target;
+}
+
+/* instance.show(); */
+
+/* console.log(instance); */
