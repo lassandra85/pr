@@ -1,8 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-/* console.dir(galleryItems); */
-
 const gallery = document.querySelector(".gallery");
 
 const markup = galleryItems
@@ -21,24 +19,36 @@ const markup = galleryItems
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", markup);
-/* console.dir(gallery); */
-
-const instance = basicLightbox.create(`
-    <div class="modal">
-        <p>
-            Your first lightbox with just a few lines of code.
-            Yes, it's really that simple.
-        </p>
-    </div>
-`);
 
 gallery.addEventListener("click", itemShow);
 
 function itemShow(evt) {
   evt.preventDefault();
-  const item = evt.target;
+
+  const itemUrl = evt.target.dataset.source;
+  const itemAlt = evt.target.alt;
+
+  const modal = basicLightbox.create(
+    `
+    <div class="modal">
+        <img>
+            class = "gallery__image"
+            src = ${itemUrl}
+            alt = ${itemAlt}
+        </img>
+    </div>
+    `,
+    {
+      onShow: (instance) => {
+        instance.element().querySelector("div").onclick = () =>
+          alert(
+            "This is an event that has been added in the `.onShow` callback of basicLightbox."
+          );
+      },
+    }
+  );
+
+  modal.show();
+  /* console.log(instance); */
+  /* console.dir(itemAlt); */
 }
-
-/* instance.show(); */
-
-/* console.log(instance); */
