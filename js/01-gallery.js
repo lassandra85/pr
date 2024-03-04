@@ -39,16 +39,17 @@ function itemShow(evt) {
     </div>
     `,
     {
-      onShow: (instance) => {
-        instance.element().querySelector("div").onclick = () =>
-          alert(
-            "This is an event that has been added in the `.onShow` callback of basicLightbox."
-          );
-      },
+      onShow: () => document.addEventListener("keydown", onEscapeKeyPress),
+      onClose: () => document.removeEventListener("keydown", onEscapeKeyPress),
     }
   );
-
   modal.show();
+
+  function onEscapeKeyPress(evt) {
+    if (evt.code === "ESCAPE") {
+      modal.onClose();
+    }
+  }
   /* console.log(instance); */
   /* console.dir(itemAlt); */
 }
