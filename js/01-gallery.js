@@ -29,13 +29,11 @@ function itemShow(evt) {
   const itemAlt = evt.target.alt;
 
   const modal = basicLightbox.create(
-    `
-    <div class="modal">
-        <img>
-            class = "gallery__image"
+    `<div class="modal">
+        <img class = "gallery__image"
             src = ${itemUrl}
             alt = ${itemAlt}
-        </img>
+        />
     </div>
     `,
     {
@@ -46,8 +44,8 @@ function itemShow(evt) {
   modal.show();
 
   function onEscapeKeyPress(evt) {
-    if (evt.code === "ESCAPE") {
-      modal.onClose();
+    if (evt.code === "Escape") {
+      modal.close();
     }
   }
   /* console.log(instance); */
