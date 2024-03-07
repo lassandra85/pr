@@ -19,14 +19,7 @@ const markup = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", markup);
 
-gallery.addEventListener("click", itemShow);
-
-function itemShow() {
-  const galleryItems = new SimpleLightbox(
-    ".gallery a" /* , {
-    options,
-  } */
-  );
-
-  console.dir(galleryItems);
-}
+const galleryShow = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
