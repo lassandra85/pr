@@ -22,4 +22,5 @@ gallery.insertAdjacentHTML("beforeend", markup);
 const galleryShow = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
+  doubleTapZoom: 5,
 });
