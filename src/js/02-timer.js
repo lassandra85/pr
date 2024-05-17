@@ -10,3 +10,5 @@ const options = {
     console.log(selectedDates[0]);
   },
 };
+
+/* window.alert("Please choose a date in the future") */
