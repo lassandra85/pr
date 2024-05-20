@@ -1,7 +1,8 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+console.log(flatpickr);
 
-const onTime = document.querySelector('datetime-picker');
+const onTime = document.querySelector('#datetime-picker');
 
 const options = {
   enableTime: true,
@@ -12,5 +13,7 @@ const options = {
     console.log(selectedDates[0]);
   },
 };
+
+flatpickr(onTime, {});
 
 /* window.alert("Please choose a date in the future") */
