@@ -17,3 +17,9 @@ const options = {
 flatpickr(onTime, {});
 
 /* window.alert("Please choose a date in the future") */
+
+/* {
+    minDate: "today",
+    maxDate: new Date().fp_incr(14) // 14 days from now
+}
+ */
