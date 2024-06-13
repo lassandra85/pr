@@ -55,3 +55,64 @@ function createPromise(position, delay) {
   });
 }
  */
+
+/* 
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(5);
+  }, 2000);
+});
+
+promise
+  .then(value => {
+    console.log(value); // 5
+    return value * 2;
+  })
+  .then(value => {
+    console.log(value); // 10
+    return value * 3;
+  })
+  .then(value => {
+    console.log(value); // 30
+  })
+  .catch(error => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("Final task");
+  });
+
+
+
+Промісифікація функцій
+
+​
+
+Уявімо, що у нас є асинхронна функція, яка виконує якусь асинхронну операцію, наприклад, запит на сервер. Для того щоб обробити результат, її доведеться спроектувати таким чином, що вона буде очікувати на два колбеки - для успішного запиту і для помилки.
+
+
+
+const fetchUserFromServer = (username, onSuccess, onError) => {
+  console.log(`Fetching data for ${username}`);
+
+  setTimeout(() => {
+    // Change value of isSuccess variable to simulate request status
+    const isSuccess = true;
+
+    if (isSuccess) {
+      onSuccess("success value");
+    } else {
+      onError("error");
+    }
+  }, 2000);
+};
+
+const onFetchSuccess = user => {
+  console.log(user);
+};
+
+const onFetchError = error => {
+  console.error(error);
+};
+
+fetchUserFromServer("Mango", onFetchSuccess, onFetchError); */
