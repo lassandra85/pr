@@ -1,3 +1,5 @@
+import { Notify } from 'notiflix';
+
 const ref = { promForm: document.querySelector('.form') };
 
 function createPromise(position, delay) {
@@ -16,7 +18,7 @@ createPromise(2, 1500)
     console.log(`❌ Rejected promise ${position} in ${delay}ms`);
   });
 
-/* import { Notify } from 'notiflix';
+/* 
 
 const promisesForm = document.querySelector('.form');
 promisesForm.addEventListener('submit', onPromisesFormSubmit);
