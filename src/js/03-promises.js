@@ -1,6 +1,6 @@
 import { Notify } from 'notiflix';
 
-const ref = { promForm: document.querySelector('.form') };
+const promisesForm = document.querySelector('.form');
 
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
