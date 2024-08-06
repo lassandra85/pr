@@ -20,9 +20,8 @@ flatpickr(onTime, {});
 
 /* {
     minDate: "today",
-    maxDate: new Date().fp_incr(14) // 14 days from now
-}
- */
+    maxDate: new Date().fp_incr(14) // 14 days from now,
+} */
 
 /* function convertMs(ms) {
   // Number of milliseconds per unit of time
@@ -102,4 +101,4 @@ const options = {
   },
 };
 
-const flatPickerEl = flatpickr('#datetime-picker', options); */
+/* const flatPickerEl = flatpickr('#datetime-picker', options); */
